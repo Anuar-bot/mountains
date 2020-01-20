@@ -65,3 +65,68 @@ html(lang="ru")
                 .about__desc
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa voluptas deleniti, iure eius ullam possimus placeat. Sed, doloribus repudiandae eaque pariatur tenetur earum error omnis enim? Perferendis saepe ullam porro!
                 .about__ps
+      
+      section.values
+        .triangles
+          svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 0,100 1000,100")
+          svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="1000,0 1000,100 0,100")
+
+        .container  
+          .values__title
+            .values__title-text Чем я могу быть вам полезен
+            .values__title-subtext
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a praesentium dicta, est vero nemo aspernatur itaque quas earum expedita rerum asperiores veniam deserunt iure alias architecto ea sint illum.
+          .values__content
+            -
+              var items = [
+                ["Frontend", ["HTML", "SCS3", "JavaScript", "jQuery and Vue.js"]],
+                ["Backend", ["HTML", "SCS3", "JavaScript", "jQuery and Vue.js"]]
+              ];
+
+            ul.skills-graphic
+              each row in items
+                li.skills-graphic__item
+                  .skills-row
+                    .skills-row__title #{row[0]}
+                    .skills-row__content
+                      ul.skills
+                        each skill in row[1]
+                          li.skills__item
+                            .skill
+                              svg.skill__circle
+                              .skill__title #{skill}
+
+
+      section.works
+        .works__title Мои работы
+        .works__content
+          .slider
+            .slider__display
+              img.slider__display-pic
+              .slider__display-thumbs
+                ul.slider-thumbs
+                  li.slider-thumbs__item
+                    a.slider-thumbs__link
+                      img.slider-thumbs__pic
+              .slider__buttons
+                a.directions-btn.directions-btn--next
+                a.directions-btn.directions-btn--prev
+
+            .slider__info
+              .slider__tags
+                ul.tags
+                  li.tags__item HTML
+                  li.tags__item CSS
+                  li.tags__item JS
+              .slider__info-text
+                h3.slider__info-title
+                .slider__info-desc
+              .slider__info-btns
+                a.iconed-link Посмотерть сайт
+
+
+        
+          
+          
