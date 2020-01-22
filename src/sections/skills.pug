@@ -1,0 +1,24 @@
+.container  
+  .values__title
+    .values__title-text Чем я могу быть вам полезен
+    .values__title-subtext
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a praesentium dicta, est vero nemo aspernatur itaque quas earum expedita rerum asperiores veniam deserunt iure alias architecto ea sint illum.
+  .values__content
+    -
+      var items = [
+        ["Frontend", ["HTML", "SCS3", "JavaScript", "jQuery and Vue.js"]],
+        ["Backend", ["HTML", "SCS3", "JavaScript", "jQuery and Vue.js"]]
+      ];
+
+    ul.skills-graphic
+      each row in items
+        li.skills-graphic__item
+          .skills-row
+            .skills-row__title #{row[0]}
+            .skills-row__content
+              ul.skills
+                each skill in row[1]
+                  li.skills__item
+                    .skill
+                      svg.skill__circle
+                      .skill__title #{skill}

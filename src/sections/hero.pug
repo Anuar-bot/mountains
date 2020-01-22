@@ -1,0 +1,24 @@
+section.hero
+  .container.hero__container
+    header.hero__header
+      .hero__logo
+        .logo АУ
+      .hero__menu
+        - var menu =  ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"];
+        nav.menu
+          ul.menu__items
+            each item in menu
+              li.menu__item
+                a.menu__link #{item}
+      .hero__links
+        - var icons = ["insta", "vk", "github"];
+        ul.socials
+          each item in icons
+            a.socials__link
+              +icon(item, "socials__icon")     
+    .hero__content
+      user-info 
+        .user__infodesc Личный сайт
+        .user-info__username Усманов Ануар
+    .hero__buttons
+      a.scroll-btn Скролл
